@@ -2,7 +2,7 @@ import re
 from urllib.parse import urlsplit
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
-URL_PATTERN = re.compile(r"https?://[^\\s<>()]+", re.IGNORECASE)
+URL_PATTERN = re.compile(r"https?://[^\s<>()]+", re.IGNORECASE)
 TRAILING_URL_PUNCTUATION = ".,!?;:)]}"
 
 def extract_single_url(message: str) -> str:
